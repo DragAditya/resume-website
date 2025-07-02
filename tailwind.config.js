@@ -109,6 +109,34 @@ module.exports = {
           "0%, 100%": { opacity: 1 },
           "50%": { opacity: 0.7 },
         },
+        "magnetic": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.05)" },
+        },
+        "shine": {
+          "0%": { backgroundPosition: "-200% center" },
+          "100%": { backgroundPosition: "200% center" },
+        },
+        "gradient-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        "rotate-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "wiggle": {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        "slide-up": {
+          "0%": { transform: "translateY(100%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
+        "slide-down": {
+          "0%": { transform: "translateY(-100%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -124,9 +152,17 @@ module.exports = {
         "float": "float 3s ease-in-out infinite",
         "bounce-slow": "bounce-slow 2s ease-in-out infinite",
         "pulse-slow": "pulse-slow 3s ease-in-out infinite",
+        "magnetic": "magnetic 0.2s ease-out",
+        "shine": "shine 2s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 3s ease-in-out infinite",
+        "rotate-slow": "rotate-slow 20s linear infinite",
+        "wiggle": "wiggle 1s ease-in-out infinite",
+        "slide-up": "slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-down": "slide-down 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'Geist', 'system-ui', 'sans-serif'],
+        display: ['Geist', 'Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       backgroundImage: {
@@ -137,7 +173,24 @@ module.exports = {
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
         'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
         'inner-glow': 'inset 0 0 20px rgba(59, 130, 246, 0.2)',
+        'neon': '0 0 5px theme(colors.primary.DEFAULT), 0 0 20px theme(colors.primary.DEFAULT), 0 0 40px theme(colors.primary.DEFAULT)',
+        'glass': '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
+        'glass-dark': '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+        'card-hover': '0 20px 60px -10px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+        'button': '0 10px 40px -10px rgba(59, 130, 246, 0.2)',
+        'button-hover': '0 10px 40px -5px rgba(59, 130, 246, 0.4)',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
+        '144': '36rem',
+      },
+      backdropBlur: {
+        'xs': '2px',
+        '4xl': '72px',
       },
     },
   },
