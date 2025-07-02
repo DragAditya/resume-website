@@ -141,7 +141,7 @@ function initProjectLinkTracking() {
             }, 150);
             
             // Track click (you can integrate with analytics here)
-            console.log(`Project link clicked: ${this.href}`);
+            // Project link clicked
         });
     });
 }
@@ -168,7 +168,10 @@ function animateSkills() {
 function initThemeToggle() {
     // Create theme toggle button
     const themeToggle = document.createElement('button');
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    // Create icon element safely
+    const icon = document.createElement('i');
+    icon.className = 'fas fa-moon';
+    themeToggle.appendChild(icon);
     themeToggle.className = 'theme-toggle';
     themeToggle.style.cssText = `
         position: fixed;
@@ -285,11 +288,11 @@ function initPerformanceMonitoring() {
     // Monitor page load performance
     window.addEventListener('load', () => {
         const loadTime = performance.now();
-        console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
+        // Page loaded successfully - can integrate with analytics
         
         // You can send this data to analytics
         if (loadTime > 3000) {
-            console.warn('Page load time is slower than expected');
+            // Page load time is slower than expected - consider optimization
         }
     });
 }

@@ -3,7 +3,7 @@
 import React, { useState, useRef } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { ExternalLink, Github, Filter, Star, Calendar, Code2, Zap, Eye } from 'lucide-react'
-import { projects } from '@/data/portfolio'
+import { projects, Project } from '@/data/portfolio'
 
 const statusColors = {
   'Completed': 'bg-green-500/20 text-green-400 border-green-500/30',
@@ -16,7 +16,7 @@ const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
   const [hoveredProject, setHoveredProject] = useState<string | null>(null)
-  const [selectedProject, setSelectedProject] = useState<any>(null)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
 

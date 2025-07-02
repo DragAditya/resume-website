@@ -120,7 +120,7 @@ export default function Contact() {
       await new Promise(resolve => setTimeout(resolve, 2000))
       
       // Here you would typically send the form data to your backend
-      console.log('Form submitted:', formData)
+              // Form submitted successfully
       
       setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })
