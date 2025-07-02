@@ -29,6 +29,7 @@ export interface Project {
   featured: boolean
   status: 'completed' | 'in-progress' | 'planned'
   year: number
+  category: string
 }
 
 export interface Experience {
@@ -99,7 +100,8 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/dragaditya/alter-debugger",
     featured: true,
     status: "completed",
-    year: 2024
+    year: 2024,
+    category: "AI/ML"
   },
   {
     id: "dragx-cli",
@@ -110,7 +112,8 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/dragaditya/dragx-cli",
     featured: true,
     status: "completed",
-    year: 2024
+    year: 2024,
+    category: "Tools"
   },
   {
     id: "portfolio-website",
@@ -122,7 +125,8 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/dragaditya/portfolio",
     featured: true,
     status: "completed",
-    year: 2024
+    year: 2024,
+    category: "Web Development"
   },
   {
     id: "task-manager",
@@ -132,7 +136,8 @@ export const projects: Project[] = [
     technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express.js", "JWT"],
     status: "in-progress",
     year: 2024,
-    featured: false
+    featured: false,
+    category: "Full Stack"
   }
 ]
 

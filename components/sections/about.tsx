@@ -156,7 +156,7 @@ export default function About() {
                 
                 <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                   <p>
-                    {personalInfo.bio}
+                    {personalInfo.description}
                   </p>
                   <p>
                     With a strong foundation in modern web technologies and a passion for 
