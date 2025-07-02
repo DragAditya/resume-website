@@ -189,7 +189,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed"
           >
-            {personalInfo.bio}
+            {personalInfo.description}
           </motion.p>
 
           {/* Location Badge */}
