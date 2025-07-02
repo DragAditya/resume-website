@@ -9,9 +9,7 @@ const withMDX = require('@next/mdx')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  experimental: {
-    appDir: true,
-  },
+
   images: {
     domains: ['github.com', 'avatars.githubusercontent.com', 'images.unsplash.com'],
   },
