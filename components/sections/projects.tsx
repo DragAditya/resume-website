@@ -243,9 +243,9 @@ export default function Projects() {
                         }}
                         transition={{ duration: 0.2 }}
                       >
-                        {project.demo && (
+                        {project.liveUrl && (
                           <motion.a
-                            href={project.demo}
+                            href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
@@ -255,9 +255,9 @@ export default function Projects() {
                             <ExternalLink className="w-4 h-4 text-white" />
                           </motion.a>
                         )}
-                        {project.github && (
+                        {project.githubUrl && (
                           <motion.a
-                            href={project.github}
+                            href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
@@ -279,7 +279,7 @@ export default function Projects() {
                         </h3>
                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
                           <Calendar className="w-3 h-3" />
-                          <span>{project.date || 'Recent'}</span>
+                          <span>{project.year || 'Recent'}</span>
                           <span className="mx-2">•</span>
                           <span className="text-primary">{project.category}</span>
                         </div>
@@ -319,9 +319,9 @@ export default function Projects() {
                           View Details
                         </motion.button>
                         
-                        {project.demo && (
+                        {project.liveUrl && (
                           <motion.a
-                            href={project.demo}
+                            href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-4 py-2 bg-gradient-to-r from-primary to-purple-600 text-white rounded-xl font-medium hover:shadow-button transition-all duration-300"
@@ -458,7 +458,7 @@ export default function Projects() {
                       {selectedProject.title}
                     </h3>
                     <p className="text-muted-foreground">
-                      {selectedProject.category} • {selectedProject.date || 'Recent'}
+                      {selectedProject.category} • {selectedProject.year || 'Recent'}
                     </p>
                   </div>
                   <button
@@ -491,9 +491,9 @@ export default function Projects() {
 
                 {/* Actions */}
                 <div className="flex gap-4 pt-4">
-                  {selectedProject.demo && (
+                  {selectedProject.liveUrl && (
                     <a
-                      href={selectedProject.demo}
+                      href={selectedProject.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-purple-600 text-white rounded-xl font-medium hover:shadow-button transition-all duration-300"
@@ -502,9 +502,9 @@ export default function Projects() {
                       Live Demo
                     </a>
                   )}
-                  {selectedProject.github && (
+                  {selectedProject.githubUrl && (
                     <a
-                      href={selectedProject.github}
+                      href={selectedProject.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-6 py-3 bg-secondary hover:bg-secondary/80 rounded-xl font-medium transition-colors"

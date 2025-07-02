@@ -264,12 +264,10 @@ export default function Skills() {
                       </div>
                     </div>
 
-                    {/* Skill Description/Tags */}
-                    {skill.description && (
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {skill.description}
-                      </p>
-                    )}
+                    {/* Skill Level Indicator */}
+                    <div className="text-sm text-muted-foreground">
+                      Level: {skill.level}%
+                    </div>
 
                     {/* Floating Particles */}
                     <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-xl">
